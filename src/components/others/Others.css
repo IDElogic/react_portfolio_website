@@ -1,0 +1,54 @@
+.others__container {
+    width: 40%;
+    padding-bottom: 4rem;
+}
+.client__avatar {
+    width: 4rem;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: .5rem;
+    margin: 0rem;
+    border: 1px solid var(--color-primary-variant);
+}
+.others {
+    background: rgba(255, 255, 255, 0.45);
+    border: 3px solid var(--color-white);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter:blur(5px);
+    text-align: center;
+    width: 70%;
+    padding: 3rem;
+    margin: 0rem;
+    border-radius: .5rem;
+    user-select: none;
+}
+.others h5, h2 {
+    color: var(--color-tomato);
+}
+.client__review {
+    color: var(--color-light);
+    font-weight: 300;
+    display: block;
+    width: 80%;
+    margin: .8rem auto 0;
+}
+.swiper-pagination-clickable .swiper-pagination-bullet{
+    background: var(--color-tomato);
+    width: 2rem;
+    padding-top: 2rem;   
+}
+/*-------media queries (medium devices) ----------*/
+@media screen and (max-width:1024px)  {
+    .container .others__container {
+        width: 60%;
+    }
+}
+/*-------media queries (small devices) ----------*/
+@media screen and (max-width:600px)  {
+    .container .others__container {
+        width: var(--container-width-sm);
+    }
+    .client__review {
+        width: var(--container-width-sm);
+    }
+}

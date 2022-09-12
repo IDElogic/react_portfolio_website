@@ -1,4 +1,121 @@
-body {
-    background: #333;
-    color: aliceblue;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Righteous&family=Roboto+Mono:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
 }
+:root {
+    --color-bg:#1f1f38; 
+    --color-bg-variant:#2c2c6c; 
+    --color-primary:#4db5ff; 
+    --color-primary-variant:rgba(77,181,255,0.4); 
+    --color-tomato:#ff6347; 
+    --color-white:#fff; 
+    --color-light:rgba(255,255,255,.6); 
+    --transition: all 400ms ease;
+    --container-width-lg:75%;
+    --container-width-md:86%;
+    --container-width-sm:90%;
+}
+body {
+    background: url("../src/assets/bg3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; 
+    color: var(--color-bg);
+    line-height: 1.7;
+    font-family: 'Quicksand', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+/*------global styles------*/
+.container {
+    width: var(--container-width-lg);
+    margin: 0 auto;
+}
+h1, h2, h3, h4, h5 {
+    font-weight: 300;
+}
+h1 {
+    font-size: 2.5rem;
+    color: var(--color-white);
+}
+section {
+   margin-top: 8rem; 
+}
+section > h2,
+section > h5 {
+    text-align: center;
+    color: var(--color-bg-variant);
+}
+section > h2 {
+    color: var(--color-bg-variant);
+    margin-bottom: 3rem;
+}
+.text-light {
+    color: var(--color-light);
+}
+a {
+    font-size: 1.2rem;
+    color: var(--color-bg-variant);
+    transition: var(--transition) ;
+}
+a:hover {
+    color: var(--color-white);
+}
+.btn {
+    background: var(--color-tomato);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter:blur(5px);
+    width: max-content;
+    display: inline-block;
+    color: var(--color-white);
+    padding: .7rem .18rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+.btn:hover{
+    background: var(--color-white);
+    color: var(--color-bg);
+    border-color: transparent;
+}
+.btn-primary {
+    background: var(--color-white);
+    color: var(--color-bg);
+}
+img {
+   display: block;
+   width:100%;
+   object-fit: cover;
+}
+/*-------media queries (medium devices) ----------*/
+@media screen and (max-width:1024px)  {
+ .container {
+    width:var(--container-width-md);
+ }
+ section {
+    margin-top: 6rem;
+ } 
+}
+/*-------media queries (small devices) ----------*/
+@media screen and (max-width:600px)  {
+ .container {
+    width:var(--container-width-sm);
+ }
+ section > h2 {
+    margin-bottom: 2rem;
+ } 
+}
+
