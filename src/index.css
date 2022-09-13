@@ -80,7 +80,7 @@ a:hover {
     width: max-content;
     display: inline-block;
     color: var(--color-white);
-    padding: .7rem .18rem;
+    padding: .7rem 1.4rem;
     border-radius: .5rem;
     cursor: pointer;
     border: 1px solid transparent;
